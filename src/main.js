@@ -36,6 +36,10 @@ const onSearchFormSubmit = event => {
     })
     .catch(err => {
       console.log(err);
+      iziToast.error({
+        message: 'Sorry, something get wrong. Try again later!',
+        position: 'topRight',
+      });
     })
       .finally(() => {
           loader.classList.add('is-hidden');
